@@ -7,8 +7,8 @@ Check off tasks as they complete. Dependencies are noted inline.
 
 ## Milestone 0 — Scaffold & repo setup
 
-- [ ] **#1** Scaffold folder structure, `.gitignore`, `.sln`, copy `docs/` and `infra/`, create `CLAUDE.md` and `PLAN.md`
-- [ ] **#10** Create private GitHub repo and push *(unblocked after #1)*
+- [x] **#1** Scaffold folder structure, `.gitignore`, `.sln`, copy `docs/` and `infra/`, create `CLAUDE.md` and `PLAN.md`
+- [x] **#10** Create private GitHub repo and push — https://github.com/davetheunissen/claims-intelligence
 
 ---
 
