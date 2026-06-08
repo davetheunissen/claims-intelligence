@@ -29,7 +29,7 @@ Check off tasks as they complete. Dependencies are noted inline.
 
 ## Milestone 3 — Tests & frontend *(unblocked after their respective deps)*
 
-- [ ] **#7** `ClaimsIntelligence.Tests` — xUnit, port all 3 Python test suites *(unblocked after #4, #5, #6)*
+- [x] **#7** `ClaimsIntelligence.Tests` — xUnit, port all 3 Python test suites *(unblocked after #4, #5, #6)*
 - [x] **#8** Next.js 15 frontend — 7-step journey, MSAL auth, Fluent UI *(unblocked after #1)*
 
 ---
