@@ -12,12 +12,13 @@ The source project (Python) lives at `../claimsintelligence` and will be deleted
 
 ```
 claims-intelligence/
-  ClaimsIntelligence.sln                   ← single solution, all backend projects
   CLAUDE.md                                ← this file
   PLAN.md                                  ← task checklist — update as work progresses
   .gitignore
   .devcontainer/                           ← .NET 9 + Node 22 + Azure CLI dev container
-  backend/src/
+  backend/
+    ClaimsIntelligence.slnx               ← single solution, all backend projects
+    src/
     ClaimsIntelligence.Domain/             ← shared models, interfaces, enums (no Azure deps)
     ClaimsIntelligence.Infrastructure/     ← Azure SDK wrappers (Blob, Queue, Cosmos, OpenAI, CU)
     ClaimsIntelligence.Api/                ← ASP.NET Core Web API gateway (50+ endpoints)
@@ -113,6 +114,9 @@ claims-intelligence/
 ## Running locally (dev container)
 
 ```bash
+# backend — build everything
+cd backend && dotnet build
+
 # backend — API
 dotnet run --project backend/src/ClaimsIntelligence.Api
 
