@@ -14,7 +14,7 @@ Check off tasks as they complete. Dependencies are noted inline.
 
 ## Milestone 1 — Shared backend foundation
 
-- [ ] **#2** `ClaimsIntelligence.Domain` — shared C# models, interfaces, enums *(unblocked after #1)*
+- [x] **#2** `ClaimsIntelligence.Domain` — shared C# models, interfaces, enums *(unblocked after #1)*
 - [ ] **#3** `ClaimsIntelligence.Infrastructure` — Azure SDK wrappers (Blob, Queue, Cosmos, OpenAI, CU, AppConfig) *(unblocked after #2)*
 
 ---
