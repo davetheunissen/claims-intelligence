@@ -1,0 +1,70 @@
+services:
+
+  # ── API gateway ─────────────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./backend
+      dockerfile: src/ClaimsIntelligence.Api/Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.local
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+    networks:
+      - claims-net
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ── ContentProcessor worker ──────────────────────────────────────────────────
+  content-processor:
+    build:
+      context: ./backend
+      dockerfile: src/ClaimsIntelligence.ContentProcessor/Dockerfile
+    env_file:
+      - .env.local
+    networks:
+      - claims-net
+    depends_on:
+      api:
+        condition: service_healthy
+
+  # ── Workflow worker ──────────────────────────────────────────────────────────
+  workflow:
+    build:
+      context: ./backend
+      dockerfile: src/ClaimsIntelligence.Workflow/Dockerfile
+    env_file:
+      - .env.local
+    networks:
+      - claims-net
+    depends_on:
+      api:
+        condition: service_healthy
+
+  # ── Next.js frontend ─────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend/src
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:8080
+      PORT: 3000
+      HOSTNAME: "0.0.0.0"
+    networks:
+      - claims-net
+    depends_on:
+      api:
+        condition: service_healthy
+
+networks:
+  claims-net:
+    driver: bridge

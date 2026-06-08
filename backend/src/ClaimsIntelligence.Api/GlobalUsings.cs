@@ -1,0 +1,10 @@
+global using System.Text.Json;
+global using ClaimsIntelligence.Api.Models.Requests;
+global using ClaimsIntelligence.Api.Models.Responses;
+global using ClaimsIntelligence.Domain.Schemas;
+global using ClaimsIntelligence.Domain.Workflow;
+global using ClaimsIntelligence.Infrastructure.Blob;
+global using ClaimsIntelligence.Infrastructure.Cosmos;
+global using ClaimsIntelligence.Infrastructure.Queue;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Azure.Cosmos;

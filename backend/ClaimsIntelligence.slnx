@@ -2,5 +2,9 @@
   <Folder Name="/src/">
     <Project Path="src/ClaimsIntelligence.Domain/ClaimsIntelligence.Domain.csproj" />
     <Project Path="src/ClaimsIntelligence.Infrastructure/ClaimsIntelligence.Infrastructure.csproj" />
+    <Project Path="src/ClaimsIntelligence.Api/ClaimsIntelligence.Api.csproj" />
+    <Project Path="src/ClaimsIntelligence.ContentProcessor/ClaimsIntelligence.ContentProcessor.csproj" />
+    <Project Path="src/ClaimsIntelligence.Tests/ClaimsIntelligence.Tests.csproj" />
+    <Project Path="src/ClaimsIntelligence.Workflow/ClaimsIntelligence.Workflow.csproj" />
   </Folder>
 </Solution>

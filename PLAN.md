@@ -21,22 +21,22 @@ Check off tasks as they complete. Dependencies are noted inline.
 
 ## Milestone 2 — Backend services *(all unblock after #3, can run in parallel)*
 
-- [ ] **#4** `ClaimsIntelligence.ContentProcessor` — .NET Worker Service, 4-stage extract pipeline
-- [ ] **#5** `ClaimsIntelligence.Api` — ASP.NET Core Web API, 5 endpoint groups, 50+ endpoints
-- [ ] **#6** `ClaimsIntelligence.Workflow` — .NET Worker Service, DAG engine, 4 executors, YAML DSL gap rules
+- [x] **#4** `ClaimsIntelligence.ContentProcessor` — .NET Worker Service, 4-stage extract pipeline
+- [x] **#5** `ClaimsIntelligence.Api` — ASP.NET Core Web API, 5 endpoint groups, 50+ endpoints
+- [x] **#6** `ClaimsIntelligence.Workflow` — .NET Worker Service, DAG engine, 4 executors, YAML DSL gap rules
 
 ---
 
 ## Milestone 3 — Tests & frontend *(unblocked after their respective deps)*
 
 - [ ] **#7** `ClaimsIntelligence.Tests` — xUnit, port all 3 Python test suites *(unblocked after #4, #5, #6)*
-- [ ] **#8** Next.js 15 frontend — 7-step journey, MSAL auth, Fluent UI *(unblocked after #1)*
+- [x] **#8** Next.js 15 frontend — 7-step journey, MSAL auth, Fluent UI *(unblocked after #1)*
 
 ---
 
 ## Milestone 4 — Dev container & infra
 
-- [ ] **#9** Dev container — `.devcontainer/`, `.env.example`, `docker-compose.yml` *(unblocked after #1)*
+- [x] **#9** Dev container — `.devcontainer/`, `.env.example`, `docker-compose.yml` *(unblocked after #1)*
 
 ---
 

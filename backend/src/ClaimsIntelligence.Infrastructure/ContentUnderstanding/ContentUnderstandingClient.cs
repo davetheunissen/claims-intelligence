@@ -8,10 +8,10 @@ using Microsoft.Extensions.Options;
 
 namespace ClaimsIntelligence.Infrastructure.ContentUnderstanding;
 
-public class ContentUnderstandingOptions
+public record ContentUnderstandingOptions
 {
-    public string Endpoint { get; set; } = string.Empty;
-    public string ApiVersion { get; set; } = "2025-11-01";
+    public string Endpoint { get; init; } = string.Empty;
+    public string ApiVersion { get; init; } = "2025-11-01";
 }
 
 public class ContentUnderstandingClient(

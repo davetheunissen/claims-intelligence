@@ -58,7 +58,7 @@ claims-intelligence/
 - ASP.NET Core Web API
 - Endpoint groups: `/contentprocessor`, `/claimprocessor`, `/schemavault`, `/schemasetvault`, `/claimsdemo`
 - Managed Identity auth — no connection strings or secrets in code
-- MongoDB.Driver for Cosmos DB (Mongo API)
+- Microsoft.Azure.Cosmos SDK for Cosmos DB (NoSQL API, partition key `/id`)
 - Swagger/OpenAPI via Swashbuckle
 
 **Frontend** — `frontend/src`
@@ -75,7 +75,7 @@ claims-intelligence/
 |---|---|
 | Azure Storage Queues | ContentProcessor (extract queue), Workflow (claim queue + DLQ) |
 | Azure Blob Storage | ContentProcessor (save results), API (read/write docs) |
-| Azure Cosmos DB (Mongo API) | All backend services — `processes`, `claimprocesses`, `schemas` collections |
+| Azure Cosmos DB (NoSQL API) | All backend services — `processes`, `claimprocesses`, `schemas`, `schemasets` containers |
 | Azure AI Content Understanding | ContentProcessor extract stage |
 | Azure OpenAI (GPT-5.1) | Workflow — RAI gate, summarize, gap analysis |
 | Azure App Configuration | All services — settings, feature flags (no secrets) |
@@ -89,7 +89,7 @@ claims-intelligence/
 |---|---|
 | FastAPI | ASP.NET Core Minimal API endpoint groups |
 | Pydantic models | C# `record` types + FluentValidation |
-| PyMongo | MongoDB.Driver |
+| PyMongo | Microsoft.Azure.Cosmos (NoSQL API) |
 | `azure-identity` | `Azure.Identity` (`DefaultAzureCredential`) |
 | `azure-storage-blob` | `Azure.Storage.Blobs` |
 | `azure-storage-queue` | `Azure.Storage.Queues` |

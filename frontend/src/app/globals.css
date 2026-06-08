@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #001272;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0D0F14;
+    --foreground: #e2e5fb;
+  }
+}
+
+[data-theme="dark"] {
+  --background: #0D0F14;
+  --foreground: #e2e5fb;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #001272;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove default margins from headings inside Fluent cards */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

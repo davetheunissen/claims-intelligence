@@ -1,0 +1,29 @@
+{
+  "name": "Claims Intelligence",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-10.0",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "ms-vscode.vscode-node-azure-pack",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "cd backend && dotnet restore && cd ../frontend/src && npm install",
+  "forwardPorts": [8080, 8081, 8082, 3000],
+  "portsAttributes": {
+    "8080": { "label": "API" },
+    "8081": { "label": "ContentProcessor" },
+    "8082": { "label": "Workflow" },
+    "3000": { "label": "Frontend" }
+  }
+}
