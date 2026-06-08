@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/ClaimsIntelligence.Domain/ClaimsIntelligence.Domain.csproj" />
+    <Project Path="src/ClaimsIntelligence.Infrastructure/ClaimsIntelligence.Infrastructure.csproj" />
   </Folder>
 </Solution>
