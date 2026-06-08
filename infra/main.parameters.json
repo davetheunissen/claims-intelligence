@@ -3,58 +3,58 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "solutionName": {
-      "value": "${AZURE_ENV_NAME}"
+      "value": "claimsdev"
     },
     "location": {
-      "value": "${AZURE_LOCATION}"
+      "value": "australiaeast"
     },
     "contentUnderstandingLocation": {
-      "value": "${AZURE_ENV_CU_LOCATION}"
+      "value": "AustraliaEast"
     },
     "azureAiServiceLocation": {
-      "value": "${AZURE_ENV_AI_SERVICE_LOCATION}"
+      "value": "australiaeast"
     },
     "deploymentType": {
-      "value": "${AZURE_ENV_MODEL_DEPLOYMENT_TYPE}"
+      "value": "GlobalStandard"
     },
     "gptModelName": {
-      "value": "${AZURE_ENV_GPT_MODEL_NAME}"
+      "value": "gpt-5.1"
     },
     "gptModelVersion": {
-      "value": "${AZURE_ENV_GPT_MODEL_VERSION}"
+      "value": "2025-03-31"
     },
     "gptDeploymentCapacity": {
-      "value": "${AZURE_ENV_GPT_MODEL_CAPACITY}"
+      "value": "10"
     },
     "existingLogAnalyticsWorkspaceId": {
-      "value": "${AZURE_ENV_EXISTING_LOG_ANALYTICS_WORKSPACE_RID}"
+      "value": ""
     },
     "existingFoundryProjectResourceId": {
-      "value": "${AZURE_EXISTING_AIPROJECT_RESOURCE_ID}"
+      "value": ""
     },
     "containerRegistryEndpoint": {
-      "value": "${AZURE_ENV_CONTAINER_REGISTRY_ENDPOINT=}"
+      "value": ""
     },
     "imageTag": {
-      "value": "${AZURE_ENV_IMAGETAG=latest_v2}"
+      "value": "latest_v2"
     },
     "claimsDemoImageUri": {
-      "value": "${CLAIMS_DEMO_IMAGE_URI=}"
+      "value": ""
     },
     "appWebClientId": {
-      "value": "${APP_WEB_CLIENT_ID=<APP_REGISTRATION_CLIENTID>}"
+      "value": "<APP_REGISTRATION_CLIENTID>"
     },
     "appApiScope": {
-      "value": "${APP_API_SCOPE=<BACKEND_API_SCOPE>}"
+      "value": "<BACKEND_API_SCOPE>"
     },
     "enablePrivateNetworking": {
-      "value": true
+      "value": false
     },
     "acrAllowedIpRules": {
-      "value": "${ACR_ALLOWED_IPS=}"
+      "value": ""
     },
     "aiSearchLocation": {
-      "value": "${AI_SEARCH_LOCATION=}"
+      "value": "australiaeast"
     },
     "enableMonitoring": {
       "value": true
